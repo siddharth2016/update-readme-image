@@ -53,9 +53,10 @@ if __name__ == "__main__":
         print("Authentication Error. Try saving a GitHub Token in your Repo Secrets or Use the GitHub Actions Token, which is automatically used by the action.")
         sys.exit(1)
     image_tag = get_image_tag(img_repo)
-    readme_content = readme_repo.get_readme().content
+    readme_obj = readme_repo.get_readme()
+    readme_content = readme_obj.content
     readme_content_decoded = decode_readme(readme_content)
     new_readme = generate_new_readme(readme=readme_content_decoded, image_tag=image_tag)
-    readme_repo.update_file(path=readme_content.path, message=COMMIT_MSG,
+    readme_repo.update_file(path=readme_obj.path, message=COMMIT_MSG,
                          content=new_readme, sha=readme_content.sha)
     print("success")
