@@ -1,0 +1,52 @@
+name: "Update Image - README"
+author: Siddharth Chandra
+description: "Update a section with given images randomly in your Readme"
+
+inputs:
+  GH_TOKEN:
+    description: "GitHub access token with Repo scope"
+    required: true
+    default: ${{ github.token }}
+
+  README_REPOSITORY:
+    description: "Your GitHub repository"
+    default: ${{ github.repository }}
+    required: false
+
+  IMG_REPOSITORY:
+    description: "Your Repo which contains images"
+    default: ${{ github.repository }}
+    required: false
+
+  IMG_PATH:
+    description: "Your path to images in IMG_REPO"
+    default: ".github/images"
+    required: false
+
+  WIDTH:
+    description: "Give width of image"
+    default: "180px"
+    required: false
+  
+  HEIGHT:
+    description: "Give height of image"
+    default: "180px"
+    required: false
+
+  ALIGN:
+    description: "Alignment of image"
+    default: "right"
+    required: false
+
+  COMMIT_MESSAGE:
+    description: "Add a commit message of your choice"
+    default: "Updated README with new Image"
+    required: false
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "image"
+  color: "orange"
