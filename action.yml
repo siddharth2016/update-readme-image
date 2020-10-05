@@ -38,6 +38,11 @@ inputs:
     default: "right"
     required: false
 
+  IMG_ALT:
+    description: "Give alternative title to image"
+    default: "Profile Image"
+    required: false
+
   COMMIT_MESSAGE:
     description: "Add a commit message of your choice"
     default: "Updated README with new Image"

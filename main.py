@@ -15,14 +15,15 @@ START_COMMENT = '<!--START_SECTION:update_image-->'
 END_COMMENT = '<!--END_SECTION:update_image-->'
 IMAGE_REPL = f"{START_COMMENT}[\\s\\S]+{END_COMMENT}"
 
-REPO = os.getenv('INPUT_README_REPOSITORY')
+REPO = os.getenv("INPUT_README_REPOSITORY")
 IMG_REPO = os.getenv("INPUT_IMG_REPOSITORY")
 IMG_PATH = os.getenv("INPUT_IMG_PATH")
-GHTOKEN = os.getenv('INPUT_GH_TOKEN')
+GHTOKEN = os.getenv("INPUT_GH_TOKEN")
 COMMIT_MSG = os.getenv("INPUT_COMMIT_MESSAGE")
 WIDTH = os.getenv("INPUT_WIDTH")
 HEIGHT = os.getenv("INPUT_HEIGHT")
 ALIGN = os.getenv("INPUT_ALIGN")
+IMG_ALT = os.getenv("INPUT_IMG_ALT")
 
 
 def get_image_tag(repo):
@@ -31,7 +32,7 @@ def get_image_tag(repo):
     images = repo.get_contents(IMG_PATH)
     image = random.choice(images)
     img_src = image.download_url
-    img_tag = f"<img src={img_src} height={HEIGHT} width={WIDTH} align={ALIGN} />"
+    img_tag = f"<img src={img_src} height={HEIGHT} width={WIDTH} align={ALIGN} alt={IMG_ALT} />"
     return img_tag
 
 def decode_readme(data: str) -> str:
