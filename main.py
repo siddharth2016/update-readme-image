@@ -58,5 +58,5 @@ if __name__ == "__main__":
     readme_content_decoded = decode_readme(readme_content)
     new_readme = generate_new_readme(readme=readme_content_decoded, image_tag=image_tag)
     readme_repo.update_file(path=readme_obj.path, message=COMMIT_MSG,
-                         content=new_readme, sha=readme_content.sha)
+                         content=new_readme, sha=readme_obj.sha)
     print("success")
