@@ -45,7 +45,7 @@ inputs:
 
   COMMIT_MESSAGE:
     description: "Add a commit message of your choice"
-    default: "Updated README with new Image"
+    default: "Update with update-readme-image"
     required: false
 
 runs:
