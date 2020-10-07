@@ -25,12 +25,17 @@ HEIGHT = os.getenv("INPUT_HEIGHT")
 ALIGN = os.getenv("INPUT_ALIGN")
 IMG_ALT = os.getenv("INPUT_IMG_ALT")
 
+VALID_IMAGES_EXT = ['png', 'jpg', 'jpeg', 'gif', 'svg']
+
 
 def get_image_tag(repo):
     ''' Get new image tag <img> to place in README '''
-    global IMG_PATH
+    global IMG_PATH, VALID_IMAGES_EXT
     images = repo.get_contents(IMG_PATH)
     image = random.choice(images)
+    if image.path.split('/')[-1].split('.')[-1].lower() not in VALID_IMAGES_EXT:
+        print(f"Please make sure image is one of following type {VALID_IMAGES_EXT}, error caused by image - {image.path}")
+        sys.exit(1)
     img_src = image.download_url
     img_tag = f"<img src={img_src} height={HEIGHT} width={WIDTH} align={ALIGN} alt={IMG_ALT} />"
     return img_tag
@@ -58,6 +63,7 @@ if __name__ == "__main__":
     readme_content = readme_obj.content
     readme_content_decoded = decode_readme(readme_content)
     new_readme = generate_new_readme(readme=readme_content_decoded, image_tag=image_tag)
-    readme_repo.update_file(path=readme_obj.path, message=COMMIT_MSG,
-                         content=new_readme, sha=readme_obj.sha)
+    if readme_content_decoded != new_readme:
+        readme_repo.update_file(path=readme_obj.path, message=COMMIT_MSG,
+                             content=new_readme, sha=readme_obj.sha)
     print("success")
