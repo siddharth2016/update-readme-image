@@ -28,13 +28,21 @@ IMG_ALT = os.getenv("INPUT_IMG_ALT")
 VALID_IMAGES_EXT = ['png', 'jpg', 'jpeg', 'gif', 'svg']
 
 
-def get_image_tag(repo):
-    ''' Get new image tag <img> to place in README '''
-    global IMG_PATH, VALID_IMAGES_EXT
-    images = repo.get_contents(IMG_PATH)
-    image = random.choice(images)
+def verify_image_ext(image):
+    ''' Validate image obtained '''
+    global VALID_IMAGES_EXT
     if image.path.split('/')[-1].split('.')[-1].lower() not in VALID_IMAGES_EXT:
         print(f"Please make sure image is one of following type {VALID_IMAGES_EXT}, error caused by image - {image.path}")
+        return False
+    return True
+
+def get_image_tag(repo):
+    ''' Get new image tag <img> to place in README '''
+    global IMG_PATH
+    images = repo.get_contents(IMG_PATH)
+    image = random.choice(images)
+    is_image = verify_image_ext(image)
+    if not is_image:
         sys.exit(1)
     img_src = image.download_url
     img_tag = f"<img src={img_src} height={HEIGHT} width={WIDTH} align={ALIGN} alt={IMG_ALT} />"
