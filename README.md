@@ -15,11 +15,11 @@ GitHub Action to update an image present in README.
 3. **Optional** You'll need a GitHub API Token with `repo` scope from [here](https://github.com/settings/tokens) if you're running the action for a non profile repository.
    - You can use [this](#other-repository-not-profile) example to work it out.
 4. You can follow any one example below according to your needs to get started !
-   - Use [this](profile-repository) on Profile Repository.
-   - Use [this](other-repository-not-profile) on any other Repository.
+   - Use [this](#profile-repository) on Profile Repository.
+   - Use [this](#other-repository-not-profile) on any other Repository.
 
 5. It is better to run the Action on your Profile Repository, since you won't be needing a GitHub Access Token !
-6. Check [this](#examples) to see available options while creating a workflow.
+6. Check [this](#examples) to see available options while creating a workflow for this action.
 
 
 ### Update Your Readme
@@ -212,9 +212,8 @@ It's better to have all images in `.github/images` to avoid any confusion and ke
     WIDTH: 180px        # default
     ALIGN: right        # default
     IMG_ALT: Profile Image      # default
-    COMMIT_MESSAGE: <your-commit-message>
+    COMMIT_MESSAGE: <your-commit-message>       # default - Update Readme Image
 ```
-If no commit message is specified in the `yml` file, it defaults to _"Update Readme Image"_.
 
 
 ### Tests
