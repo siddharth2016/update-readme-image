@@ -1,6 +1,10 @@
 # Random Image on README  [![Travis CI Build Status](https://api.travis-ci.org/siddharth2016/update-readme-image.svg?branch=main)](https://travis-ci.org/github/siddharth2016/update-readme-image)
 
-GitHub Action to update an image present on README.
+![Github Socialify](https://socialify.git.ci/siddharth2016/update-readme-image/image?font=Source%20Code%20Pro&forks=1&issues=1&pattern=Brick%20Wall&stargazers=1&theme=Dark)
+
+---
+
+## GitHub Action to update an image present on README.
 
 ![Random Image On Readme Result](images/result.png)
 
