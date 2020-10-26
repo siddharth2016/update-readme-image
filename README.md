@@ -229,4 +229,4 @@ python -m unittest discover
 
 #### Another intriguing action you would want to use - [quote-readme](https://github.com/siddharth2016/quote-readme)
 
-##### If you liked this Action and want to contribute to upgrade this utility, please create an issue or throw a PR !
+#### If you liked this Action and want to contribute to upgrade this utility, please create an issue or throw a PR !
