@@ -1,6 +1,10 @@
 # Random Image on README  [![Travis CI Build Status](https://api.travis-ci.org/siddharth2016/update-readme-image.svg?branch=main)](https://travis-ci.org/github/siddharth2016/update-readme-image)
 
-GitHub Action to update an image present on README.
+![Github Socialify](https://socialify.git.ci/siddharth2016/update-readme-image/image?font=Source%20Code%20Pro&forks=1&issues=1&pattern=Brick%20Wall&stargazers=1&theme=Dark)
+
+---
+
+## GitHub Action to update an image present on README
 
 ![Random Image On Readme Result](images/result.png)
 
@@ -17,7 +21,6 @@ GitHub Action to update an image present on README.
 4. You can follow any one example below according to your needs to get started !
    - Use [this](#profile-repository) on Profile Repository.
    - Use [this](#other-repository-not-profile) on any other Repository.
-
 5. It is better to run the Action on your Profile Repository, since you won't be needing a GitHub Access Token !
 6. Check [this](#examples) to see available options while creating a workflow for this action.
 
@@ -224,5 +227,6 @@ To run tests simply execute the following in the directory containing `main.py`:
 python -m unittest discover
 ```
 
+#### Another intriguing action you would want to use - [quote-readme](https://github.com/siddharth2016/quote-readme)
 
 #### If you liked this Action and want to contribute to upgrade this utility, please create an issue or throw a PR !
