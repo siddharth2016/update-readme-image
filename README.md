@@ -21,7 +21,6 @@
 4. You can follow any one example below according to your needs to get started !
    - Use [this](#profile-repository) on Profile Repository.
    - Use [this](#other-repository-not-profile) on any other Repository.
-
 5. It is better to run the Action on your Profile Repository, since you won't be needing a GitHub Access Token !
 6. Check [this](#examples) to see available options while creating a workflow for this action.
 
