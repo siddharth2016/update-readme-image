@@ -4,7 +4,7 @@
 
 ---
 
-## GitHub Action to update an image present on README.
+## GitHub Action to update an image present on README
 
 ![Random Image On Readme Result](images/result.png)
 
