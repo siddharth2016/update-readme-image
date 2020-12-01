@@ -227,6 +227,14 @@ To run tests simply execute the following in the directory containing `main.py`:
 python -m unittest discover
 ```
 
+---
+
 #### Another intriguing action you would want to use - [quote-readme](https://github.com/marketplace/actions/quote-readme)
 
 #### If you liked this Action and want to contribute to upgrade this utility, please create an issue or throw a PR !
+
+---
+
+#### Inspired From
+
+[athul/waka-readme](https://github.com/athul/waka-readme)
