@@ -24,6 +24,7 @@
 5. It is better to run the Action on your Profile Repository, since you won't be needing a GitHub Access Token !
 6. Check [this](#examples) to see available options while creating a workflow for this action.
 
+---
 
 ### Update Your Readme
 
@@ -36,6 +37,7 @@ Add a comment to your `README.md` like this:
 
 You can place these 2 lines anywhere you want your images to be displayed.
 
+---
 
 ### Images Repository
 
@@ -69,6 +71,7 @@ with:
   IMG_REPOSITORY: <username>/<imagerepo>
 ```
 
+---
 
 ### Profile Repository
 
@@ -112,6 +115,7 @@ jobs:
 6. Go to Workflows menu (mentioned in step 1), click `Update Image Readme`, click `Run workflow`.
 7. Go to your profile page, you will be able to see a random image from your collection of images.
 
+---
 
 ### Other Repository (not Profile)
 
@@ -158,6 +162,7 @@ Add `IMG_REPOSITORY` or `IMG_PATH` as required, check [this](#images-repository)
 5. Go to Workflows menu (mentioned in step 1), click `Update Image Readme`, click `Run workflow`.
 6. Go to your non-profile readme page, you will be able to see a random image from your collection of images.
 
+---
 
 ### Examples
 
@@ -218,6 +223,7 @@ It's better to have all images in `.github/images` to avoid any confusion and ke
     COMMIT_MESSAGE: <your-commit-message>       # default - Update Readme Image
 ```
 
+---
 
 ### Tests
 
