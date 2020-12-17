@@ -12,7 +12,7 @@
 
 ## Random Image (from a collection of given images) on your (Profile) Readme
 
-## How To Use This Action
+### How To Use This Action
 
 There is a short tutorial with enough steps for you to get started with this not-so-useful GitHub Action. Check that out [here](https://blog.codekaro.info/update-image-readme-see-random-image-on-your-github-profile-readme).
 
