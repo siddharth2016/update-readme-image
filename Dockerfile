@@ -8,5 +8,6 @@ RUN pip install -r requirements.txt
 ADD light.py /light.py
 ADD dark.py /dark.py
 
-CMD ["python", "/light.py"]
 CMD ["python", "/dark.py"]
+CMD ["python", "/light.py"]
+
