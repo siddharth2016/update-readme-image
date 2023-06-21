@@ -1,6 +1,4 @@
 #!/bin/bash
 
-set -e
-
-exec python light.py &
-exec python dark.py 
+python light.py &
+python dark.py 
