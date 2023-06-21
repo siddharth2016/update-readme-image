@@ -5,6 +5,8 @@ ADD requirements.txt /requirements.txt
 RUN pip install -r requirements.txt
 
 # Copy code.
-ADD main.py /main.py
+ADD light.py /main.py
+ADD dark.py /main.py
 
-CMD ["python", "/main.py"]
+CMD ["python", "/light.py"]
+CMD ["python", "/dark.py"]
