@@ -8,5 +8,5 @@ RUN pip install -r requirements.txt
 ADD light.py /light.py
 ADD dark.py /dark.py
 
-ENTRYPOINT ["/docker_entrypoint.sh"]
+ENTRYPOINT ["docker_entrypoint.sh"]
 
